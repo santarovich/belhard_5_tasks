@@ -33,6 +33,10 @@ def replacer(check_str: str, search_str: str, replace_str: str) -> str:
     :rtype: str
     """
     result = None
+    if search_str in check_str:
+        result = check_str.replace(search_str, replace_str).capitalize()
+    else:
+        result = "Ошибка!"
     return result
 
 
