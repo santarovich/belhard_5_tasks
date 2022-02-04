@@ -11,7 +11,7 @@
 def multiplication_table(n: int) -> list:
     result = []
     for i in range(11):
-        num = result.append(n * i)
+        result.append(n * i)
     return result
 
 
