@@ -9,9 +9,14 @@
 """
 
 
+from collections import Counter
+
+
 def common_and_longest(text: str) -> tuple:
-    common = None
-    longest = None
+    counter = Counter(text.split())
+    common = counter.most_common()[0][0]
+    longest = max(text.split(), key=len)
+    print(common, longest)
     return common, longest
 
 
