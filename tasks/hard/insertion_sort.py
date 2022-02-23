@@ -21,12 +21,13 @@
 
 
 def insertion_sort(array: list) -> list:
-    for i in range(len(array) - 1):
-        min_index = i
-        for j in range(i + 1, len(array)):
-            if array[min_index] > array[j]:
-                min_index = j
-        array[min_index], array[i] = array[i], array[min_index]
+    for i in range(1, len(array)):
+        key = array[i]
+        j = i - 1
+        while j >= 0 and key < array[j]:
+            array[j + 1] = array[j]
+            j = j - 1
+        array[j + 1] = key
     return array
 
 
